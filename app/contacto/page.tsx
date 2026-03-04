@@ -3,6 +3,7 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 import Navbar from '../components/layout/Navbar'
+import { getPublicPath } from '../utils/paths'
 
 export default function ContactPage() {
   const [eventType, setEventType] = useState('boda')
@@ -15,7 +16,7 @@ export default function ContactPage() {
         {/* Left Image Section - Static */}
         <div className="relative hidden lg:block h-screen sticky top-0 mt-32">
           <Image
-            src="/images/necesidad.png"
+            src={getPublicPath('/images/necesidad.png')}
             alt="Wedding venue setup"
             fill
             sizes="(max-width: 1024px) 100vw, 50vw"

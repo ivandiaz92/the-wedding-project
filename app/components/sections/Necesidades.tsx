@@ -4,6 +4,7 @@ import React, { useRef, useState, useCallback, useEffect } from 'react'
 import { motion, useMotionValue, animate } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
+import { getPublicPath } from '../../utils/paths'
 
 // ─── Data ──────────────────────────────────────────────────────────────────────
 const items = [
@@ -145,7 +146,7 @@ export default function Necesidades() {
                 style={{ width: cardWidth || `calc((100% - ${GAP * (perView - 1)}px) / ${perView})` }}
               >
                 <div className="necesidad-card-icon">
-                  <Image src={item.icon} alt={item.label} width={80} height={80} className="w-full h-full object-contain" />
+                  <Image src={getPublicPath(item.icon)} alt={item.label} width={80} height={80} className="w-full h-full object-contain" />
                 </div>
                 <span className="necesidad-card-label">{item.label}</span>
                 <span className="necesidad-card-detail">{item.detail}</span>

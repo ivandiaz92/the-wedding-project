@@ -31,10 +31,14 @@ jobs:
       - name: Remove API routes for static export
         run: rm -rf app/api
 
+      - name: Optimize images
+        run: npm run optimize-images
+
       - name: Build static export
         env:
           BUILD_FOR_GITHUB_PAGES: '1'
           NEXT_PUBLIC_BASE_PATH: '/the-wedding-project'
+          NEXT_PUBLIC_SITE_ORIGIN: 'https://ivandiaz92.github.io'
         run: npm run build
 
       - name: Upload artifact

@@ -1,12 +1,13 @@
 /** @type {import('next').NextConfig} */
 const isGitHubPages = process.env.BUILD_FOR_GITHUB_PAGES === '1'
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
+const siteOrigin = process.env.NEXT_PUBLIC_SITE_ORIGIN || ''
 
 const nextConfig = {
   reactStrictMode: true,
   output: isGitHubPages ? 'export' : 'standalone',
   basePath: basePath || undefined,
-  assetPrefix: basePath ? `${basePath}/` : undefined,
+  assetPrefix: siteOrigin ? `${siteOrigin}${basePath}/` : basePath ? `${basePath}/` : undefined,
   trailingSlash: isGitHubPages,
   transpilePackages: ['@shadergradient/react'],
   images: {

@@ -37,9 +37,15 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const siteOrigin = process.env.NEXT_PUBLIC_SITE_ORIGIN || ''
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
+  const formulaBgUrl = siteOrigin && basePath ? `${siteOrigin}${basePath}/images/formula-bg.png` : null
   return (
     <html lang="en" className={`${geologica.variable} ${romans.variable} ${degular.variable} font-sans antialiased min-h-screen w-full max-w-[100vw] bg-white text-secondary ${figtree.variable}`}>
       <body className={`${geologica.variable} ${romans.variable} ${degular.variable} ${figtree.variable} scroll-smooth w-full max-w-[100vw]`}>
+        {formulaBgUrl && (
+          <style dangerouslySetInnerHTML={{ __html: `:root{--formula-bg-url:url("${formulaBgUrl}")}` }} />
+        )}
         <main className="w-full min-w-0 max-w-[100vw]">
           {children}
         </main>

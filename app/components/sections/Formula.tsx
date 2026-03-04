@@ -3,6 +3,7 @@
 import React, { useRef, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { getPublicPath } from '../../utils/paths'
 import {
   motion,
   useScroll,
@@ -113,7 +114,7 @@ export default function Formula() {
                 style={{ opacity, scale }}
               >
                 <Image
-                  src={SCENES[i].image}
+                  src={getPublicPath(SCENES[i].image)}
                   alt=""
                   fill
                   className="object-cover"

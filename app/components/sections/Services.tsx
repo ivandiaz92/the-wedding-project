@@ -4,6 +4,7 @@ import React, { useRef, useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
+import { getPublicPath } from '../../utils/paths'
 
 // ─── Data ──────────────────────────────────────────────────────────────────────
 const services = [
@@ -177,7 +178,7 @@ export default function Services() {
                 transition={{ duration: 0.85, ease: 'easeInOut' }}
               >
                 <Image
-                  src={service.image}
+                  src={getPublicPath(service.image)}
                   alt={service.title}
                   fill
                   className="object-cover"
@@ -217,7 +218,7 @@ export default function Services() {
               {/* Image */}
               <div className="relative w-full" style={{ paddingBottom: '62%' }}>
                 <Image
-                  src={service.image}
+                  src={getPublicPath(service.image)}
                   alt={service.title}
                   fill
                   className="object-cover"

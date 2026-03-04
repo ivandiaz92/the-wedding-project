@@ -3,6 +3,7 @@
 import React, { useRef } from 'react'
 import Image from 'next/image'
 import { motion, useScroll, useTransform } from 'framer-motion'
+import { getPublicPath } from './utils/paths'
 import Navbar from './components/layout/Navbar'
 import Formula from './components/sections/Formula'
 import Services from './components/sections/Services'
@@ -76,7 +77,7 @@ export default function Home() {
             style={{ scale: heroScale, opacity: heroOpacity }}
           >
             <Image
-              src="/images/hero-image.png"
+              src={getPublicPath('/images/hero-image.png')}
               alt="Wedding venue"
               fill
               className="object-cover brightness-90"
@@ -228,7 +229,7 @@ export default function Home() {
       {/* Numbers Section */}
       <section className="relative min-h-[50vh] overflow-hidden">
         <Image
-          src="/images/numbers-banner.png"
+          src={getPublicPath('/images/numbers-banner.png')}
           alt="Wedding Numbers"
           fill
           sizes="100vw"

@@ -116,7 +116,7 @@
 
 /* Formula section: formula-bg.png with light overlay */
 .formula-bg-full {
-  background-image: url('/images/formula-bg.png');
+  background-image: var(--formula-bg-url, url('/images/formula-bg.png'));
   background-size: cover;
   background-position: center;
 }
