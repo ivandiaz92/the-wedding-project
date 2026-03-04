@@ -7,8 +7,10 @@ const nextConfig = {
   output: isGitHubPages ? 'export' : 'standalone',
   basePath: basePath || undefined,
   assetPrefix: basePath ? `${basePath}/` : undefined,
+  trailingSlash: isGitHubPages,
   transpilePackages: ['@shadergradient/react'],
   images: {
+    unoptimized: isGitHubPages,
     formats: ['image/avif', 'image/webp'],
     remotePatterns: [
       { protocol: 'http', hostname: 'localhost', port: '1337', pathname: '/uploads/**' },
