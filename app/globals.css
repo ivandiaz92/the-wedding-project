@@ -3,6 +3,8 @@
 @tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@1,400&display=swap');
 
 @font-face {
   font-family: 'Romans Story';
@@ -12,18 +14,10 @@
   font-display: swap;
 }
 
-@font-face {
-  font-family: 'Honya';
-  src: url('/fonts/honya.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
 :root {
-  --font-romans: 'Romans Story', serif;
-  --font-honya: 'Honya', sans-serif;
+  --font-romans: 'Romans Story', serif; /* fallback only — Tailwind uses the name directly */
   --font-geologica: 'Geologica', sans-serif;
+  --font-cormorant: 'Cormorant', serif;
   --primary: #E4B56B;
   --primary-rgb: 228, 181, 107;
   --secondary: #1E1E1E;
@@ -97,6 +91,11 @@
   }
 }
 
+@keyframes services-marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
 @keyframes wave {
   0%, 100% {
     transform: translateY(0);
@@ -112,6 +111,118 @@
   }
   50% {
     transform: translateX(4px);
+  }
+}
+
+/* Formula section: formula-bg.png with light overlay */
+.formula-bg-full {
+  background-image: url('/images/formula-bg.png');
+  background-size: cover;
+  background-position: center;
+}
+.formula-bg-full::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.35) 0%,
+    rgba(248, 246, 243, 0.4) 50%,
+    rgba(255, 255, 255, 0.35) 100%
+  );
+  pointer-events: none;
+}
+.formula-card {
+  padding: clamp(2rem, 4vw, 3rem) clamp(1.5rem, 3vw, 2.5rem);
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(45, 37, 32, 0.12);
+  border-radius: 2px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+  color: #2d2520;
+}
+.formula-card-title {
+  font-family: var(--font-romans);
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  line-height: 1.2;
+  color: #2d2520;
+  text-align: left;
+  margin: 0 0 1rem 0;
+  letter-spacing: 0.02em;
+}
+.formula-card-text {
+  font-family: var(--font-geologica);
+  font-weight: 300;
+  font-size: clamp(1.125rem, 2.2vw, 1.5rem);
+  line-height: 1.55;
+  color: #2d2520;
+  text-align: left;
+  margin: 0;
+}
+
+/* ─── Necesidades: numbered cards (full-width layout) ────────────────────
+   px-6 mobile | px-10 sm | px-14 md | px-16 lg | px-20 xl  — gap-3 / gap-4
+   Card widths: mobile 50vw−30px | sm 25vw−32px | md 25vw−40px
+                lg 25vw−44px    | xl 25vw−52px
+   Targets: padding 10% | number 42% | label 15% | detail 9%
+   ──────────────────────────────────────────────────────────────────────── */
+
+/* Necesidad items: icon + text only, no card box */
+.necesidad-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 1rem;
+  user-select: none;
+}
+.necesidad-card-icon {
+  flex-shrink: 0;
+  margin-bottom: clamp(1.5rem, 4.5vw, 5rem);
+  width: clamp(5rem, 28vw, 8rem);
+  height: clamp(5rem, 28vw, 8rem);
+  overflow: hidden;
+}
+.necesidad-card-icon img {
+  transform: scale(1.8);
+  transform-origin: center center;
+  width: 100% !important;
+  height: 100% !important;
+}
+.necesidad-card-label {
+  font-family: var(--font-degular), sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: #1a1a1a;
+  line-height: 1.3;
+  letter-spacing: 0.02em;
+  overflow-wrap: normal;
+  word-break: normal;
+  font-size: clamp(1.5rem, 3vw, 3.25rem);
+}
+.necesidad-card-detail {
+  font-family: var(--font-degular), sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #1a1a1a;
+  line-height: 1.5;
+  margin-top: clamp(1rem, 2.5vw, 2rem);
+  overflow-wrap: normal;
+  word-break: normal;
+  opacity: 1;
+  font-size: clamp(1.25rem, 3.5vw, 1.9rem);
+}
+
+@media (max-width: 767px) {
+  .necesidad-card {
+    padding: 1.75rem 1rem;
+  }
+  .necesidad-card-icon {
+    width: clamp(5.5rem, 32vw, 8rem);
+    height: clamp(5.5rem, 32vw, 8rem);
+    margin-bottom: clamp(1.75rem, 5vw, 5rem);
+  }
+  .necesidad-card-label  { font-size: clamp(1.75rem, 7vw, 3.25rem); }
+  .necesidad-card-detail {
+    font-size: clamp(1.35rem, 5vw, 2rem);
+    margin-top: clamp(1.25rem, 3vw, 2rem);
   }
 }
 
@@ -176,5 +287,86 @@
   .wave-arrow-wrapper {
     position: relative;
     z-index: 1;
+  }
+}
+
+/* Team Section Styles */
+.team-section {
+  position: relative;
+  z-index: 1;
+  padding-top: clamp(4rem, 8vh, 6rem);
+  overflow: hidden;
+}
+
+.team-slider-wrapper {
+  position: relative;
+  z-index: 1;
+  padding: clamp(1rem, 2vh, 1.5rem) 0;
+  margin: calc(-1 * clamp(1rem, 2vh, 1.5rem)) 0;
+}
+
+.team-section .swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+
+.team-section .swiper-slide {
+  opacity: 1;
+  height: clamp(450px, 55vh, 600px);
+  width: 100%;
+}
+
+/* Team Member Styles */
+.team-member-name {
+  font-family: var(--font-cormorant);
+  font-weight: 300;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  line-height: 1.2;
+  letter-spacing: 0.05em;
+}
+
+.team-member-description {
+  font-family: var(--font-geologica);
+  font-size: clamp(0.875rem, 2vw, 1rem);
+  line-height: 1.5;
+}
+
+.team-member-image {
+  transition: filter 0.3s ease;
+  height: clamp(400px, 50vh, 550px);
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  width: 100%;
+}
+
+.team-member-role {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(4px);
+  padding: clamp(0.5rem, 1vw, 0.75rem) clamp(1rem, 2vw, 1.5rem);
+  font-size: clamp(0.75rem, 1.5vw, 0.875rem);
+  font-family: var(--font-geologica);
+}
+
+.team-member-button {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  transition: all 0.3s ease;
+  padding: clamp(0.5rem, 1vw, 0.75rem) clamp(1rem, 2vw, 1.5rem);
+  font-size: clamp(0.875rem, 1.5vw, 1rem);
+  font-family: var(--font-geologica);
+  color: white;
+}
+
+.team-member-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Mobile-only: touch smoothing. Do NOT set overflow on body/html here or sticky breaks. */
+@media (max-width: 767px) {
+  html {
+    -webkit-overflow-scrolling: touch;
+  }
+  body {
+    -webkit-tap-highlight-color: transparent;
   }
 }

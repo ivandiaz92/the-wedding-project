@@ -2,49 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100;200;300;400;500;600;700&display=swap');
-
-@font-face {
-  font-family: 'Romans Story';
-  src: url('/fonts/romans-story.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Honya';
-  src: url('/fonts/honya.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-:root {
-  --font-romans: 'Romans Story', serif;
-  --font-honya: 'Honya', sans-serif;
-  --font-geologica: 'Geologica', sans-serif;
-  --color-primary: #E4C7A3;
-  --color-secondary: #333333;
-  --background: #ffffff;
-  --foreground: #171717;
-  --font-serif: 'Romans Story', serif;
-  --font-sans: 'Honya', sans-serif;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -65,7 +22,7 @@
   }
 }
 
-/* Aggressively hide all Next.js development indicators */
+/* Hide Next.js development indicators */
 #__next-build-watcher,
 #__next-prerender-indicator,
 [data-nextjs-dialog-overlay],

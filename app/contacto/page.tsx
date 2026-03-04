@@ -18,6 +18,7 @@ export default function ContactPage() {
             src="/images/necesidad.png"
             alt="Wedding venue setup"
             fill
+            sizes="(max-width: 1024px) 100vw, 50vw"
             className="object-cover"
             priority
           />

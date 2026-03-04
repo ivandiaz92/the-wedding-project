@@ -1,7 +1,7 @@
 import React from 'react'
 import type { Metadata } from 'next'
 import './globals.css'
-import { Geologica } from 'next/font/google'
+import { Geologica, Figtree } from 'next/font/google'
 import localFont from 'next/font/local'
 import Footer from './components/layout/Footer'
 
@@ -15,9 +15,16 @@ const romans = localFont({
   variable: '--font-romans',
 })
 
-const honya = localFont({
-  src: '../public/fonts/honya.ttf',
-  variable: '--font-honya',
+const degular = localFont({
+  src: '../public/fonts/Degular-Regular.otf',
+  variable: '--font-degular',
+  display: 'swap',
+})
+
+const figtree = Figtree({ 
+  subsets: ['latin'],
+  weight: ['300', '400', '500'],
+  variable: '--font-figtree',
 })
 
 export const metadata: Metadata = {
@@ -31,9 +38,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={`${geologica.variable} ${romans.variable} ${honya.variable} font-sans antialiased min-h-screen w-full overflow-x-hidden bg-white text-secondary`}>
-        {children}
+    <html lang="en" className={`${geologica.variable} ${romans.variable} ${degular.variable} font-sans antialiased min-h-screen w-full max-w-[100vw] bg-white text-secondary ${figtree.variable}`}>
+      <body className={`${geologica.variable} ${romans.variable} ${degular.variable} ${figtree.variable} scroll-smooth w-full max-w-[100vw]`}>
+        <main className="w-full min-w-0 max-w-[100vw]">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>

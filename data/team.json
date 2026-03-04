@@ -1,0 +1,84 @@
+{
+  "members": [
+    {
+      "id": "cecy",
+      "name": "CECY DE LA GARZA",
+      "role": "THE PLANNER",
+      "profession": "PROFESIÓN",
+      "experience": "+15 AÑOS EN LA INDUSTRIA",
+      "image": "/team/Ceci2.jpg"
+    },
+    {
+      "id": "fredo",
+      "name": "FREDO CANTÚ",
+      "profession": "PROFESIÓN",
+      "experience": "+15 AÑOS EN LA INDUSTRIA",
+      "image": "/team/fredo.jpg"
+    },
+    {
+      "id": "eva",
+      "name": "EVA CABALLERO",
+      "profession": "MERCADÓLOGA & DISEÑADORA FLORAL",
+      "experience": "UDEM & IMTF CERTIFIED",
+      "description": "Soy Eva Caballero, tengo 30 años, Mercadóloga egresada de la UDEM, Diseñadora Floral certificada por el IMTF y Wedding Planner certificada por The Wedding Project. A lo largo de mi trayectoria profesional, he tenido la oportunidad de desarrollarme en distintas áreas, desde el ramo editorial hasta la creación y gestión de productos físicos y digitales. Mi experiencia en gestión de proyectos me ha permitido combinar mi creatividad con la organización estratégica, logrando materializar ideas en experiencias únicas y memorables. Me apasiona diseñar momentos que capturen la esencia de cada persona, cuidando cada detalle para transformar sueños en realidad. Mi enfoque va más allá de la planificación; busco innovar en la industria de bodas y eventos, integrando herramientas digitales, asesorías personalizadas y productos diseñados para facilitar la experiencia de quienes buscan hacer de su celebración algo verdaderamente especial.",
+      "image": "/team/eva.jpg"
+    },
+    {
+      "id": "antonio",
+      "name": "ANTONIO",
+      "profession": "GASTRONOMÍA Y ENOLOGÍA",
+      "experience": "THE HIDDEN KITCHEN ALUMNI",
+      "description": "Soy Antonio, estudié la Licenciatura en Gastronomía y Enología en el Instituto Gastronómico Hidalguense, con un enfoque especial en el servicio y la creación de experiencias para el comensal. Más adelante me uní a The Hidden Kitchen, un taller gastronómico donde participé en la producción de eventos para empresas, marcas de lujo y celebridades. Ahí, fui testigo del impacto de los eventos pop-up, diseñados para ofrecer experiencias únicas e inolvidables. Más adelante, decidí profundizar en el mundo de las bodas y realicé mi certificación en The Wedding Project. En ese momento no imaginaba lo transformador que sería este camino. Hoy, las bodas representan para mí la fusión perfecta de todo lo que me apasiona: la hospitalidad, la decoración, la música y la creación de experiencias memorables. Como wedding planner, mi objetivo es diseñar momentos únicos y significativos, convirtiendo cada celebración en una experiencia inolvidable.",
+      "image": "/team/antonio.jpg"
+    },
+    {
+      "id": "lily",
+      "name": "LILY LOZANO",
+      "profession": "ARQUITECTA",
+      "experience": "WEDDING PLANNER",
+      "description": "Mi nombre es Lily Lozano, soy arquitecta de profesión, pero mi pasión por el diseño y la creación de experiencias me llevó a ejercer como wedding planner. Mi pasión es diseñar experiencias memorables, cuidando cada detalle para que cada boda sea un reflejo genuino de los novios. Busco crear ambientes únicos, donde la estética, la emoción y la funcionalidad se fusionan para impactar en la experiencia de los invitados. Siempre estoy en búsqueda de tendencias, asegurándose de personalizar cada evento y transmitir la esencia de quienes lo celebran. Para mí, cada boda es una oportunidad de transformar sueños en momentos inolvidables.",
+      "image": "/team/Lily.jpeg"
+    },
+    {
+      "id": "mitch",
+      "name": "MICHEL NIEVES",
+      "profession": "RELACIONES INTERNACIONALES",
+      "experience": "5+ AÑOS EN EVENTOS",
+      "description": "Mi nombre es Michel Nieves, Licenciada en Relaciones Internacionales con una Maestría en Ciencias Políticas. Mi pasión por mi carrera me ha llevado a explorar diversas áreas y fue precisamente en este camino donde descubrí mi verdadera vocación: la organización de eventos. Hace cinco años me adentré en el mundo de la logística y organización de eventos dentro del sector corporativo. Sin embargo, hace poco más de un año, tuve el privilegio de unirme al equipo de TWP, justo después de certificarme con ellos. En este tiempo, he tenido la oportunidad de aprender una infinidad de trucos y secretos del mágico mundo de las bodas, lo que solo ha confirmado mi amor por lo que hago. Mi objetivo es asegurarme de que cada detalle, por pequeño que sea, esté perfectamente ejecutado para que tú puedas disfrutar del momento sin preocupaciones. ¡Estoy lista para ayudarte a hacer realidad tu visión!",
+      "image": "/team/Mich.Jpeg"
+    },
+    {
+      "id": "jimena",
+      "name": "JIMENA",
+      "profession": "DISEÑADORA INDUSTRIAL",
+      "experience": "WEDDING PLANNER CERTIFICADA",
+      "description": "Soy Jimena, Diseñadora industrial con mente creativa, especializada en la conceptualización de eventos y planificación estratégica para transformar ideas en experiencias memorables. Wedding planner certificada con una amplia trayectoria en producción y ejecución de eventos, creando celebraciones únicas y personalizadas. Mi enfoque se basa en la atención al detalle, la innovación y la gestión integral, garantizando eventos impecables y llenos de significado. Maestra de yoga, me encanta el hiking, la naturaleza y los animales.",
+      "image": "/team/jimena.jpg"
+    },
+    {
+      "id": "mac",
+      "name": "MARIA CRISTINA CHÁVEZ",
+      "nickname": "MAC",
+      "profession": "ARTES ESCÉNICAS",
+      "experience": "UNIVERSIDAD DE SONORA",
+      "description": "Soy de Hermosillo, Sonora. Licenciada en Artes Escénicas opc. Danza Contemporánea por la Universidad de Sonora. Tengo 23 años y estoy sumamente feliz de formar parte de The Wedding Project. Mis hobbies favoritos son bailar, crear contenido para redes sociales, organizar eventos, dar clases, y hacer gimnasia. Me encanta hacer muchas cosas a la vez, ayudar a los demás, ser activa y comprometida con mis actividades/labores. Me encanta poder formar parte de tu proceso creando tu dream wedding, es un gusto para mí guiarte en esta etapa tan linda.",
+      "image": "/team/Mac.jpeg"
+    },
+    {
+      "id": "suseth",
+      "name": "SUSETH",
+      "profession": "COMERCIO INTERNACIONAL",
+      "experience": "3+ AÑOS EN LOGÍSTICA",
+      "description": "Soy licenciada en Comercio Internacional, con tres años de experiencia en transporte y logística, asegurando que todo llegue a su destino de manera eficiente. Sin embargo, mi verdadera pasión son las bodas; desde niña, soñaba con formar parte de ellas gracias a Vestido de Novia, y hoy, como wedding planner, disfruto cada detalle que las hace inolvidables. Amo la música en todas sus formas, desde Taylor Swift hasta Metallica, y mi color favorito es el rosa. Manejar con mi playlist a todo volumen es mi terapia, así como disfrutar de un café frío por las mañanas. También soy fan de las series y de los pequeños momentos que hacen la vida especial. Soy organizada, creativa y romántica, siempre lista para nuevas experiencias.",
+      "image": "/team/Suseth.jpeg"
+    },
+    {
+      "id": "athziri",
+      "name": "AHTZIRI CIENFUEGOS",
+      "profession": "NEGOCIOS DE ENTRETENIMIENTO",
+      "experience": "2+ AÑOS EN BODAS",
+      "description": "Soy Ahtziri Cienfuegos, tengo 22 años y me gradué en Negocios de Entretenimiento en la Universidad Tecnológica Americana (UTECA). Actualmente trabajo en The Wedding Project y colaboro con otras Wedding Planners en la Ciudad de México. Además, me dedico a mis 4 emprendimientos, donde puedo expresar mi creatividad y pasión por la vida. Anteriormente, trabajé en el Museo de Cera de la Ciudad de México, y posteriormente me dediqué al mundo de las bodas, donde he estado trabajando durante los últimos 2 años. Me considero una persona curiosa, creativa y un poco loca (en el buen sentido, por supuesto). Me encanta viajar, probar nuevos alimentos, practicar deportes extremos y aprender nuevas cosas. Pero lo que más me gusta es hacer que la gente sonría y se sienta feliz. Desde muy joven supe que quería dedicarme a algo relacionado con bodas, porque me encanta la emoción, la pasión y la diversión que rodea a estos eventos. Y ahora, me siento afortunada de poder hacer lo que amo todos los días.",
+      "image": "/team/Atzhiri.jpeg"
+    }
+  ]
+} 

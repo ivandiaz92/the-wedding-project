@@ -1,25 +1,43 @@
-import React from 'react'
+'use client'
+
+import React, { useRef } from 'react'
 import Link from 'next/link'
-import Image from 'next/image'
+import { motion, useScroll, useTransform } from 'framer-motion'
 
 export default function Footer() {
+  const footerRef = useRef<HTMLElement>(null)
+
+  const { scrollYProgress } = useScroll({
+    target: footerRef,
+    offset: ['start end', 'center center'],
+  })
+
+  const titleFontSize = useTransform(scrollYProgress, (v) => {
+    const size = 2.5 + v * 5.8
+    return `${Math.min(size, 7.8)}vw`
+  })
+  const titleOpacity = useTransform(scrollYProgress, [0, 0.15, 0.45], [0.4, 0.7, 1])
+
   return (
-    <footer className="w-full bg-white">
-      {/* Main Footer */}
-      <div className="w-full py-12">
-        <nav className="flex flex-col items-center">
-          {/* Logo */}
-          <div className="w-full px-8">
-            <Link 
-              href="/" 
-              className="block w-full font-romans text-[7vw] tracking-[0.1em] text-secondary text-center"
+    <footer ref={footerRef} className="w-full bg-white">
+      <div className="w-full py-8 sm:py-12 flex flex-col items-center justify-center min-h-[55vh]">
+        <nav className="flex flex-col items-center w-full">
+          <div className="w-full flex justify-center pl-[10vw] pr-[10vw]">
+            <motion.div
+              className="origin-center text-center shrink-0"
+              style={{ fontSize: titleFontSize, opacity: titleOpacity }}
             >
-              THE WEDDING PROYECT
-            </Link>
+              <Link
+                href="/"
+                className="block font-romans tracking-[0.02em] text-secondary whitespace-nowrap"
+              >
+                THE WEDDING PROJECT
+              </Link>
+            </motion.div>
           </div>
 
           {/* Navigation Links */}
-          <div className="mt-8 flex items-center gap-8 sm:gap-12 font-geologica text-sm tracking-[0.2em] uppercase text-secondary/80">
+          <div className="mt-6 sm:mt-8 flex flex-wrap items-center justify-center gap-4 sm:gap-8 md:gap-12 font-geologica text-xs sm:text-sm tracking-[0.15em] sm:tracking-[0.2em] uppercase text-secondary/80 px-4">
             <Link href="/servicios" className="hover:text-primary transition-colors">
               Servicios
             </Link>
@@ -40,8 +58,8 @@ export default function Footer() {
       </div>
 
       {/* Bottom Footer */}
-      <div className="border-t border-secondary/10">
-        <div className="container mx-auto px-4 py-6">
+      <div className="border-t border-secondary/10 w-full max-w-[100vw] overflow-x-hidden">
+        <div className="w-full min-w-0 container mx-auto px-4 sm:px-6 py-4 sm:py-6">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             {/* Left Links */}
             <div className="flex items-center gap-6 text-xs text-secondary/60">
