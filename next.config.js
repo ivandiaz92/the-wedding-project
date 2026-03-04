@@ -1,9 +1,12 @@
 /** @type {import('next').NextConfig} */
+const isGitHubPages = process.env.BUILD_FOR_GITHUB_PAGES === '1'
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
+
 const nextConfig = {
   reactStrictMode: true,
-  output: 'export',
-  basePath: process.env.NODE_ENV === 'production' ? '/the-wedding-project' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/the-wedding-project/' : '',
+  output: isGitHubPages ? 'export' : 'standalone',
+  basePath: basePath || undefined,
+  assetPrefix: basePath ? `${basePath}/` : undefined,
   transpilePackages: ['@shadergradient/react'],
   images: {
     formats: ['image/avif', 'image/webp'],

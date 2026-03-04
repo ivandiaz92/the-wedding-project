@@ -30,6 +30,9 @@ jobs:
         run: npm ci
 
       - name: Build static export
+        env:
+          BUILD_FOR_GITHUB_PAGES: '1'
+          NEXT_PUBLIC_BASE_PATH: '/the-wedding-project'
         run: npm run build
 
       - name: Upload artifact
