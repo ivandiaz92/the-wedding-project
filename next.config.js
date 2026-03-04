@@ -1,7 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  output: 'standalone',
+  output: 'export',
+  basePath: process.env.NODE_ENV === 'production' ? '/the-wedding-project' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/the-wedding-project/' : '',
   transpilePackages: ['@shadergradient/react'],
   images: {
     formats: ['image/avif', 'image/webp'],
